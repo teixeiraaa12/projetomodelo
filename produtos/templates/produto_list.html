@@ -11,7 +11,9 @@
                 <th>Nome</th>
                 <th>Preço</th>
                 <th>Categoria</th>
+                <th>Imagem</th>
                 <th>Ações</th>
+            
             </tr>
         </thead>
         <tbody>
@@ -20,6 +22,13 @@
                 <td>{{ produto.nome }}</td>
                 <td>R$ {{ produto.preco }}</td>
                 <td>{{ produto.categoria.nome }}</td>
+                <td> {% if produto.imagem is not None %}
+                    <img src = "{{ produto.imagem.url}}" width='100px'>
+                    {% else %}
+                    Produto sem Imagem
+                    {% endif %}
+                </td>
+
                 <td>
                     <a href="{% url 'produto_update' produto.pk %}" class="btn">Editar</a>
                     

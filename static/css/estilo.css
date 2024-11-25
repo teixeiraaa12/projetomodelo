@@ -1,115 +1,196 @@
-*{
-    margin:0;
-    padding:0;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-header,footer{
+
+header, footer {
     width: 100vw;
     height: 10vh;
-    background-color: rgb(247, 231, 11);
+    background-color: black;
     display: flex;
     gap: 10vw;
     align-items: center;
     justify-content: space-between;
 }
-.esquerda{
+
+.esquerda, .direita {
     display: flex;
     align-items: center;
 }
-.direita{
-    display: flex;
-    align-items: center;
-}
-.container{
-    width:100vw;
+
+
+.container {
+    width: 100vw;
     min-height: 80vh;
     padding-top: 10vh;
-    background-color: rgb(132, 207, 10);
+    background-color: darkgray;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:5vh;
+    gap: 5vh;
 }
-table, thead,tbody{
-    width: 80%;
 
+table, thead, tbody {
+    width: 80%;
 }
-tr,li{
+
+tr, li {
     width: 100%;
     min-width: 6vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid rgb(0, 0, 0);
-
 }
-th,td{
-    width:15vw;
+
+th, td {
+    width: 15vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.btn{
+
+.btn {
     text-decoration: none;
-    background-color: rgb(247, 231, 11,0.7);
+    background-color: rgba(247, 231, 11, 0.7);
     color: white;
     padding: 2px;
-    margin:2px;
+    margin: 2px;
     border-radius: 10px;
 }
-.btn:hover{
-    text-decoration: none;
-    background-color: rgb(247, 231, 11,1);
-    color: white;
-    padding: 2px;
-    margin:2px;
-    border-radius: 10px;
+
+.btn:hover {
+    background-color: rgba(247, 231, 11, 1);
     border: 2px solid white;
 }
 
-
-.btnv{
+.btnv {
     text-decoration: none;
-    background-color: rgb(247, 231, 11,0.7);
+    background-color: rgba(247, 231, 11, 0.7);
     color: white;
     padding: 2px;
-    margin:2px;
+    margin: 2px;
     border-radius: 10px;
 }
-.btnv:hover{
-    text-decoration: none;
-    background-color: rgb(247, 231, 11,0.7);
-    color: white;
-    padding: 2px;
-    margin:2px;
-    border-radius: 10px;
+
+.btnv:hover {
+    background-color: rgba(247, 231, 11, 0.7);
     border: 2px solid white;
 }
-ul{
+
+ul {
     list-style: none;
 }
-form{
+
+form {
     width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vh;
 }
-form>p{
+
+form > p {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    
+    align-items: flex-start;
 }
-.logo{
+
+.logo {
     height: 10vh;
     width: 10vw;
 }
 
-.btnacesso{
-    height:100%;
+.btnacesso {
+    height: 100%;
     display: flex;
     align-items: center;
 }
+
+
+
+@media screen and (max-width: 480px) {
+    header, footer {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    .esquerda, .direita {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo {
+        height: 8vh;
+        width: 20vw;
+    }
+    .container {
+        padding-top: 5vh;
+        gap: 2vh;
+    }
+    table, thead, tbody {
+        width: 95%;
+    }
+    th, td {
+        width: 100%;
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
+    }
+    form {
+        width: 100%;
+        gap: 3vh;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .logo {
+        height: 10vh;
+        width: 15vw;
+    }
+    .container {
+        gap: 4vh;
+    }
+    table, thead, tbody {
+        width: 90%;
+    }
+    th, td {
+        width: 25%;
+        font-size: 14px;
+    }
+    form {
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header, footer {
+        gap: 5vw;
+    }
+    .logo {
+        height: 9vh;
+        width: 9vw;
+    }
+    table, thead, tbody {
+        width: 85%;
+    }
+    th, td {
+        width: 20%;
+        font-size: 16px;
+    }
+    form {
+        width: 50%;
+    }
+}
+
+
